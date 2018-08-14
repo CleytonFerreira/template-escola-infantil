@@ -20,6 +20,10 @@
         .navbar{
             background-color:rebeccapurple;
         }
+		
+		#contato{
+			
+		}
     </style>
 </head>
 <body id="inicio" class="d-print-block">
@@ -78,7 +82,7 @@
                 <div class="row">
                     <div class="col-lg-4 pb-5">
                         <div class="card bg-light" style="width: 18rem;">
-							<img class="card-img-top" src="./assets/cursos_01.jpg" alt="Card image cap">
+							<img class="card-img-top" src="./assets/cursos_01.jpg" alt="cursos01">
 							<div class="card-body">
 								<p class="card-text">
 									Lorem ipsum rutrum felis varius donec ante aliquet posuere interdum faucibus, dictumst lobortis primis 
@@ -90,7 +94,7 @@
 
 					<div class="col-lg-4 pb-5">
 						<div class="card bg-light" style="width: 18rem;">
-							<img class="card-img-top" src="./assets/cursos_02.jpg" alt="Card image cap">
+							<img class="card-img-top" src="./assets/cursos_02.jpg" alt="cursos02">
 							<div class="card-body">
 								<p class="card-text">
 									Lorem ipsum rutrum felis varius donec ante aliquet posuere interdum faucibus, dictumst lobortis primis 
@@ -102,7 +106,7 @@
 
 					<div class="col-lg-4 pb-5">
 						<div class="card bg-light" style="width: 18rem;">
-							<img class="card-img-top" src="./assets/cursos_03.jpg" alt="Card image cap">
+							<img class="card-img-top" src="./assets/cursos_03.jpg" alt="cursos03">
 							<div class="card-body">
 								<p class="card-text">
 									Lorem ipsum rutrum felis varius donec ante aliquet posuere interdum faucibus, dictumst lobortis primis 
@@ -131,7 +135,7 @@
                 <div class="row">
                     <div class="col-lg-4 pb-5">
                         <div class="card bg-light" style="width: 18rem;">
-                            <img class="card-img-top" src="./assets/eventos_01.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="./assets/eventos_01.jpg" alt="eventos01">
                             <div class="card-body">
                                 <p class="card-text">
                                     Lorem ipsum rutrum felis varius donec ante aliquet posuere interdum faucibus, dictumst lobortis primis 
@@ -143,7 +147,7 @@
 
                     <div class="col-lg-4 pb-5">
                         <div class="card bg-light" style="width: 18rem;">
-                            <img class="card-img-top" src="./assets/eventos_02.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="./assets/eventos_02.jpg" alt="eventos02">
                             <div class="card-body">
                                 <p class="card-text">
                                     Lorem ipsum rutrum felis varius donec ante aliquet posuere interdum faucibus, dictumst lobortis primis 
@@ -155,7 +159,7 @@
 
                     <div class="col-lg-4 pb-5">
                         <div class="card bg-light" style="width: 18rem;">
-                            <img class="card-img-top" src="./assets/eventos_03.jpg" alt="Card image cap">
+                            <img class="card-img-top" src="./assets/eventos_03.jpg" alt="eventos03">
                             <div class="card-body">
                                 <p class="card-text">
                                     Lorem ipsum rutrum felis varius donec ante aliquet posuere interdum faucibus, dictumst lobortis primis 
@@ -229,8 +233,24 @@
 
 
 
-    <script> src="./js/jquery-3.3.1.min.js"</script>
-    <script> src="./js/popper.min.js"</script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("a").on('click', function(event) {
+			    if (this.hash !== "") {
+			      event.preventDefault();
+			      var hash = this.hash;
+
+			      $('html, body').animate({
+			        scrollTop: $(hash).offset().top
+			      }, 1000, function(){
+			        window.location.hash = hash;
+			      });
+		    	} // end if
+		  	});
+		});
+	</script>
 </body>
 </html>
